@@ -2,50 +2,61 @@ body{
     margin: 0;
     color: white;
 }
-hr{
-    margin: 20px 150px;
+.navi{
+    display: flex;
+    flex-wrap: wrap;
 }
-.sticky{
-    position: fixed;
+.gradient1{
+    background: #cc2b5e;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #753a88, #cc2b5e);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #753a88, #cc2b5e); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+      
 }
-
 ul{
     margin: 0 10px;
+    width: 100%;
+    top: 0;
+    
 }
 li{
     list-style: none;
     display: inline-block;
     padding: 20px;
-    margin: 0 10px;
-    
+    margin: 0 10px;  
 }
+/* @media all and (max-width: 550px) {
+    li:last-child { display: none; }
+} */
+
+li:last-child{
+    float: right;
+}
+
+@media all and (max-width: 650px) {
+    hr { display: none; }
+}
+
+hr{
+    
+    margin: 20px 150px;
+}
+
 a{
     text-decoration: none;
     font-size: large;
     color: white;
 }
 
-li:last-child{
-    float: right;
-}
 
-.red{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    margin: 0 300px;
+.cover{   
+    margin: 0 auto;
+    padding: 0 auto;
     
 }
-.cover{
+.wrapper > img{
     width: 100%;
-    margin: 20px 0;
-}
-.gradient1{
-    background: #cc2b5e;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #753a88, #cc2b5e);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #753a88, #cc2b5e); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-        
+    max-width: 800px;
+    min-width: 200px;
 }
 
 .wrapper{    
@@ -68,6 +79,7 @@ li:last-child{
 }
 .box > img{
     width: 100%;
+    min-width: 100px;
 }
 
 .orange{
